@@ -7,7 +7,7 @@ ENV GO-111MODULE=off
 
 COPY . .
 
-RUN CO-ENABLED=0 go build /app
+RUN CO_ENABLED=0 go build -o /app
 
 ------mutli stage with scratch-------
 
