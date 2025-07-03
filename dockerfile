@@ -3,7 +3,8 @@
 ###########################################
 FROM ubuntu as build
 
-RUN apt-get update && apt-get install -y golang:1.XX
+RUN apt-get update && apt-get install -y golang-go
+
 
 ENV GO-111MODULE=off
 
