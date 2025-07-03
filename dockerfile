@@ -1,4 +1,6 @@
----------bash image--------
+###########################################
+# BASE IMAGE
+###########################################
 FROM ubuntu as build
 
 RUN apt-get update && apt-get install -y golang:1.XX
@@ -9,7 +11,9 @@ COPY . .
 
 RUN CO_ENABLED=0 go build -o /app
 
-------mutli stage with scratch-------
+############################################
+# HERE STARTS THE MAGIC OF MULTI STAGE BUILD
+############################################
 
 FROM scratch
 
